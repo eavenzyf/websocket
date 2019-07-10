@@ -16,7 +16,7 @@ import org.springframework.web.servlet.ModelAndView;
 @RestController
 public class InfoController {
     @Autowired
-    WebSocketServer server;
+    private WebSocketServer server;
     @PostMapping("login")
     public String login(String username,String password) throws Exception{
         server.sendInfo(username + "进入了聊天室!");
